@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Fira Code', monospace;
+  }
+  
+  body {
+    @apply bg-mixxx-darker text-white overflow-hidden;
+  }
+}
+
+@layer components {
+  .vinyl-platter {
+    @apply relative rounded-full bg-gradient-to-r from-gray-800 to-gray-900;
+    background-image: radial-gradient(circle at center, transparent 20%, rgba(0,0,0,0.3) 21%, rgba(0,0,0,0.3) 80%, transparent 81%);
+  }
+  
+  .vinyl-record {
+    @apply absolute inset-0 rounded-full bg-gradient-to-r from-gray-900 to-black;
+    background-image: 
+      radial-gradient(circle at center, #000 15%, transparent 16%),
+      radial-gradient(circle at center, transparent 40%, rgba(255,255,255,0.1) 41%, rgba(255,255,255,0.1) 42%, transparent 43%),
+      radial-gradient(circle at center, transparent 60%, rgba(255,255,255,0.05) 61%, rgba(255,255,255,0.05) 62%, transparent 63%);
+  }
+  
+  .waveform-container {
+    @apply bg-mixxx-dark border border-gray-700 rounded-lg overflow-hidden;
+  }
+  
+  .mixer-knob {
+    @apply w-12 h-12 rounded-full bg-gradient-to-b from-gray-300 to-gray-600 border-2 border-gray-500 cursor-pointer select-none;
+    background-image: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), transparent 60%);
+  }
+  
+  .slider-track {
+    @apply bg-gray-700 rounded-full relative;
+  }
+  
+  .slider-thumb {
+    @apply bg-gradient-to-b from-gray-300 to-gray-600 rounded-full border-2 border-gray-500 cursor-pointer;
+  }
+}
